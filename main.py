@@ -20,7 +20,7 @@ def main() -> None:
     assert ENTRY.strip(), "entry must not be only whitespace"
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
-        f.write(ENTRY)
+        f.write(ENTRY.rstrip("\n") + "\n")
 
 
 if __name__ == "__main__":
